@@ -1,0 +1,4 @@
+# Xuali
+
+`GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;`
