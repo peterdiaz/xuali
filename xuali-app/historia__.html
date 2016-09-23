@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Xuali</title>
+  <meta content="IE=edge" http-equiv="x-ua-compatible">
+  <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- Icons -->
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+  <!-- Styles -->
+  <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+  <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+  <link href="css/swiper.css" rel="stylesheet" type="text/css">
+  <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <style>
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    iframe,
+    embed,
+    object {
+      max-width: 100%;
+    }
+    
+    .container {
+      width: 100%;
+      padding: 0px;
+      margin: 0px auto;
+      background: #fff;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .vendor {
+      padding: 0px;
+      background: #d1eed1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="m-scene" id="main" style="height: 100%;">
+    <!-- Main Container -->
+    <!-- Sidebars -->
+    <!-- Left Sidebar -->
+    <ul id="slide-out-left" class="side-nav collapsible">
+      <li>
+        <div class="sidenav-header primary-color">
+          <div class="nav-social">
+          </div>
+          <div class="nav-avatar">
+
+            <img class="circle avatar" src="img/user.jpg" alt="">
+            <a href="profile.html">
+              <div class="avatar-body">
+                <h3>Nombre Usuario</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li><a href="historias.html" class="no-child"><i class="ion-ios-videocam"></i> Historias</a></li>
+      <li><a href="preguntas.html" class="no-child"><i class="ion-android-chat"></i> Preguntas</a></li>
+      <li><a href="calendario.html" class="no-child"><i class="ion-android-calendar"></i> Eventos</a></li>
+      <li><a href="profile.html" class="no-child"><i class="ion-android-person"></i> Mi perfil</a></li>
+    </ul>
+    <!-- End of Sidebars -->
+
+    <!-- Page Content -->
+    <div id="content" class="page" style="height: 100%;">
+
+      <!-- Toolbar -->
+      <div id="toolbar" class="primary-color">
+        <div class="open-left" id="open-left" data-activates="slide-out-left">
+          <i class="ion-android-menu"></i>
+        </div>
+        <span class="title">Xuali</span>
+      </div>
+
+      <!-- Main Content -->
+
+      <div class="animated fadeinup">
+        <div class="container">
+          <div class="vendor">
+            <iframe src="./video/ana_mana.mp4" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Main Contents -->
+
+
+
+
+  </div>
+  <!-- End of Page Content -->
+
+
+  </div>
+  <!-- End of Page Container -->
+
+
+  <script src="js/jquery-2.1.0.min.js"></script>
+  <script src="js/jquery.swipebox.min.js"></script>
+  <script src="js/jquery.smoothState.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.mixitup.min.js"></script>
+  <script src="js/masonry.min.js"></script>
+  <script src="js/chart.min.js"></script>
+  <script src="js/functions.js"></script>
+
+  <script src="js/jquery.fitvids.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Target your .container, .wrapper, .post, etc.
+      $(".container").fitVids();
+    });
+  </script>
+</body>
+
+</html>
