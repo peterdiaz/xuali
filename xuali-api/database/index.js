@@ -1,23 +1,18 @@
-var Sequelize = require('sequelize');
-var requireDir = require('require-dir');
-var config = require('./dbConfig');
-var path = require('path');
+var mysql = require('promise-mysql');
+var config = require('../config');
 
-var sequelize = new Sequelize(
-    config.databaseName,
-    config.user,
-    config.password, {
-        host: config.host,
-        port: config.port,
-        dialect: config.dialect
-    }
-);
+pool = mysql.createPool({
+    host: config.host,
+    user: config.db.user,
+    password: config.db.password,
+    database: config.db.database,
+    connectionLimit: 10
+});
 
-//Create Models
-var models = requireDir('./models');
-
-for (var model in models) {
-    module.exports[model] = sequelize.import(path.join(__dirname, 'models', model));
+function getSqlConnection() {
+    return pool.getConnection().disposer(function (connection) {
+        pool.releaseConnection(connection);
+    });
 }
 
-module.exports.sequelize = sequelize;
+module.exports = getSqlConnection;

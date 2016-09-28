@@ -6,6 +6,9 @@
   <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
+
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <!-- Icons -->
@@ -48,7 +51,7 @@
     <!-- End of Sidebars -->
 
     <!-- Page Content -->
-    <div id="content" class="page">
+    <div id="content" class="page" style="overflow-x: hidden;">
 
       <!-- Toolbar -->
       <div id="toolbar" class="primary-color">
@@ -63,99 +66,32 @@
 
         <div class="container">
           <div class="row">
+
+              <h4 class="chatTitulo col s12"></h4>
+          </div>  
+          <div class="row">
             <div class="col s12">
               <div class="chat">
                 <ul>
                   <li class="message-right animated fadeinright">
                     <img alt="" src="img/user3.jpg">
                     <div class="message">
-                      <p>
+                      <p class="pregunta">
                         Hello! The brown fox jumps over.
                       </p>
                     </div>
-                    <span>Seen at 08:23</span>
+                    <span class="fecha">Ayer</span>
                   </li>
 
-                  <li class="message-left animated fadeinright delay-1">
-                    <img alt="" src="img/user2.jpg">
-                    <div class="message first">
-                      <p>
-                        The quick, brown fox jumps over a lazy dog.
-                      </p>
-                    </div>
-                    <div class="message">
-                      <img alt="" src="img/9.jpg">
-                    </div>
-                    <div class="message last">
-                      <p>
-                        Hope to see you soon!
-                      </p>
-                    </div>
-                  </li>
-
-                  <div class="chat-day">
-                    <h6>March 27 at 6:32</h6>
-                  </div>
-
-                  <li class="message-right animated fadeinright delay-2">
-                    <img alt="" src="img/user3.jpg">
-                    <div class="message">
-                      <p>
-                        Quick, Baz, get my woven!
-                      </p>
-                    </div>
-                    <span>Seen at 07:44</span>
-                  </li>
 
                   <li class="message-left animated fadeinright delay-3">
                     <img alt="" src="img/user2.jpg">
                     <div class="message">
-                      <p>
+                      <p class="respuesta">
                         Call me now!
                       </p>
                     </div>
-                  </li>
-
-                  <li class="message-right animated fadeinright delay-4">
-                    <img alt="" src="img/user3.jpg">
-                    <div class="message first">
-                      <p>
-                        Let's watch my latest shots.
-                      </p>
-                    </div>
-                    <div class="message last">
-                      <p>
-                        Ok! You're right!
-                      </p>
-                    </div>
-                  </li>
-
-                  <li class="message-left animated fadeinright delay-5">
-                    <img alt="" src="img/user2.jpg">
-                    <div class="message first">
-                      <p>
-                        Junk MTV quiz graced...
-                      </p>
-                    </div>
-                    <div class="message">
-                      <p>
-                        Ok! You're right!
-                      </p>
-                    </div>
-                    <div class="message last">
-                      <p>
-                        Bawds jog!
-                      </p>
-                    </div>
-                  </li>
-
-                  <li class="message-right animated fadeinright delay-6">
-                    <img alt="" src="img/user3.jpg">
-                    <div class="message">
-                      <p>
-                        Quick zephyrs blow, vexing daft Jim.
-                      </p>
-                    </div>
+                     <span class="fecha">Hoy</span>
                   </li>
 
                 </ul>
@@ -166,6 +102,23 @@
 
       </div>
       <!-- End of Main Contents -->
+ <!-- Footer -->
+        <footer class="page-footer primary-color">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <div class="center-align">
+                  <i class="ion-social-facebook m-10 white-text"></i>
+                  <i class="ion-social-twitter m-10 white-text"></i>
+                  <i class="ion-social-instagram m-10 white-text"></i>
+                  <i class="ion-social-youtube m-10 white-text"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright blue darken-1" style="height: 7px;">
+          </div>
+        </footer>
 
 
     </div>
@@ -184,6 +137,8 @@
   <script src="js/masonry.min.js"></script>
   <script src="js/chart.min.js"></script>
   <script src="js/functions.js"></script>
+
+  <script src="js/pregunta.js"></script>
 </body>
 
 </html>

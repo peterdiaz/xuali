@@ -51,33 +51,37 @@
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12 m6" style="margin-bottom:20px;">
-            <i class="ion-android-document prefix"></i>
-            <input class="validate" id="tipo_id" type="text">
-            <label for="tipo_id">Tipo de Identificacion</label>
-          </div>
+          
+            
+            <div class="input-field col s12 m6">
+              <i class="ion-android-document prefix"></i>
+              <input class="validate" id="tipoDocumento" type="text">
+              <label for="tipoDocumento">Tipo de Identificacion</label>
+            </div>
+            
+          
 
           <div class="input-field col s12 m6" style="margin-bottom:20px;">
             <i class="ion-android-hand prefix"></i>
-            <input class="validate" id="identificacion" type="text">
-            <label for="identificacion">Numero de Identificacion</label>
+            <input class="validate" id="idDocumento" type="text">
+            <label for="idDocumento">Numero de Identificacion</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12 m6" style="margin-bottom:20px;">
             <i class="ion-android-lock prefix"></i>
-            <input class="validate" id="login-psw" type="password">
-            <label for="login-psw">Clave</label>
+            <input class="validate" id="password" type="password">
+            <label for="password">Clave</label>
           </div>
 
           <div class="input-field col s12 m6" style="margin-bottom:20px;">
             <i class="ion-android-done prefix"></i>
-            <input class="validate" id="login-psw-2" type="password">
-            <label for="login-psw-2">Canfirma la clave</label>
+            <input class="validate" id="password2" type="password">
+            <label for="password2">Confirma la clave</label>
           </div>
         </div>
 
-        <a class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4" href="historias.html">Registrar</a>
+        <div id="registrar" class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4">Registrar</div>
         <div class="center-align">
           <span>Ya tienes una cuenta? <a class="primary-text" href="ingreso.html">Ingresa!</a></span>
           <div class="center-align">
@@ -92,7 +96,6 @@
     </div>
     <!-- End of Page Container -->
 
-
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/jquery.swipebox.min.js"></script>
     <script src="js/jquery.smoothState.min.js"></script>
@@ -102,6 +105,7 @@
     <script src="js/masonry.min.js"></script>
     <script src="js/chart.min.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 
 </html>

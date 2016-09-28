@@ -269,41 +269,6 @@ function initiate_plugins() {
             highlight: "#fff176",
             label: "New"
         }];
-    // Bar Chart
-    var barChartData = {
-        labels: ["1", "2", "3", "4", "5"],
-        datasets: [{
-            fillColor: "rgba(100, 181, 246, 0.5)",
-            strokeColor: "#90caf9",
-            highlightFill: "rgba(41, 128, 185, 0.9)",
-            highlightStroke: "rgba(41, 128, 185, 0)",
-            data: [65, 59, 90, 56, 40]
-        }, {
-                fillColor: "rgba(155, 89, 182, 0.5)",
-                strokeColor: "rgba(155, 89, 182, 0.6)",
-                highlightFill: "rgba(155, 89, 182, 0.9)",
-                highlightStroke: "rgba(231, 76, 60, 0)",
-                data: [28, 48, 19, 27, 90]
-            }]
-    }
-    var ctx = document.getElementById("canvas").getContext("2d");
-    window.myLine = new Chart(ctx).Line(lineChartData, {
-        responsive: true,
-    });
-    var ctx2 = document.getElementById("pieChart").getContext("2d");
-    window.myPie = new Chart(ctx2).Pie(pieData, {
-        animation: true,
-        responsive: true
-    });
-    var ctx3 = document.getElementById("barChart").getContext("2d");
-    window.myBar = new Chart(ctx3).Bar(barChartData, {
-        responsive: true
-    });
-    var ctx4 = document.getElementById("doughnutChart").getContext("2d");
-    window.myPie = new Chart(ctx4).Doughnut(doughnutData, {
-        animation: true,
-        responsive: true
-    });
 
 }
 ////--> End of Call all function for Ajax, now from there recall all the functions <--////
