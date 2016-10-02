@@ -35,7 +35,7 @@ historias = function () {
   app.init = function () {
     $.ajax({
         method: "GET",
-        url: "http://127.0.0.1:8085/api/historias",
+        url: "https://xualiapi.herokuapp.com/api/historias",
         data: {},
         beforeSend: function (xhr) {
           xhr.setRequestHeader("Authorization", "Basic " + localStorage.basicAuth);

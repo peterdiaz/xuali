@@ -3,12 +3,9 @@
 <head>
   <title>Xuali</title>
   <meta content="IE=edge" http-equiv="x-ua-compatible">
-  <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+  <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
-
-  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <!-- Icons -->
@@ -24,64 +21,67 @@
 <body>
   <div class="m-scene" id="main">
     <!-- Main Container -->
-    <!-- Sidebars -->
-    <!-- Left Sidebar -->
-    <ul id="slide-out-left" class="side-nav collapsible">
-      <li>
-        <div class="sidenav-header primary-color">
-          <div class="nav-social">
-          </div>
-          <div class="nav-avatar">
-
-            <img class="circle avatar" src="img/user.jpg" alt="">
-            
-              <div class="avatar-body">
-                <h3 id="userName">Nombre Usuario</h3>
-              </div>
-            <span id="logoutButton"> <i class="ion-android-exit m-r-5"> </i> </span>
-          </div>
-        </div>
-      </li>
-      <li><a href="historias.html" class="no-child"><i class="ion-ios-videocam"></i> Historias</a></li>
-      <li><a href="preguntas.html" class="no-child"><i class="ion-android-chat"></i> Preguntas</a></li>
-      <li><a href="calendario.html" class="no-child"><i class="ion-android-calendar"></i> Eventos</a></li>
-      
-    </ul>
-    <!-- End of Sidebars -->
 
     <!-- Page Content -->
     <div id="content">
 
       <!-- Toolbar -->
-      <div id="toolbar" class="primary-color">
-        <div class="open-left" id="open-left" data-activates="slide-out-left">
-          <i class="ion-android-menu"></i>
-        </div>
+      <div id="toolbar" class="halo-nav box-shad-none">
         <span class="title">Xuali</span>
       </div>
 
       <!-- Main Content -->
-      <div class="animated fadeinup">
+      <div class="animated fadeinup fullscreen">
 
+        <!-- Slider -->
+        <div class="swiper-container slider-sliced">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide bg-v-2">
+            
+              <div class="opacity-overlay-black"></div>
+              <div class="bottom-abs left-align" style="padding: 10px">
+                <p class="slider-category white-text">Historias</p>
+                <h4 class="slider-title uppercase white-text">Conoce historias de gente real en xuali</h4>
+                <p class="slider-text small white-text">En xuali queremos que conozcas historias de jovenes como tu, historias que te inspiren a vivir una vida plena y con responsabilidad sobre tu sexualidad.
+                  <br/><br/> <a class="waves-effect waves-light btn-large primary-color block animated bouncein delay-4" href="registro.html">Registrate</a>
+                  <br/> <a class="waves-effect waves-light btn-large primary-color block animated bouncein delay-6" href="ingreso.html">Ingresa</a>
+                </p>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide bg-v-3">
+              <div class="opacity-overlay-black"></div>
+              <div class="bottom-abs center-align" style="padding: 10px">
+                <p class="slider-category white-text">Asesorias</p>
+                <h4 class="slider-title uppercase white-text">Respondemos tus preguntas</h4>
+                <p class="slider-text small white-text">Puedes resolver todas tus inquietudes de forma anonima, un experto te respondera las preguntas que nos hagas.
+                  <br/><br/> <a class="waves-effect waves-light btn-large primary-color block animated bouncein delay-4" href="registro.html">Registrate</a>
+                  <br/> <a class="waves-effect waves-light btn-large primary-color block animated bouncein delay-6" href="ingreso.html">Ingresa</a>
+                </p>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide bg-v-4">
+              <div class="opacity-overlay-black"></div>
+              <div class="bottom-abs right-align" style="padding: 10px">
+                <p class="slider-category white-text">Eventos</p>
+                <h4 class="slider-title uppercase white-text">Conoce el calendario de eventos</h4>
+                <p class="slider-text small white-text">Te mostramos el calendario de los eventos a los que podras asistir, donde puedes aprender y conocer a jovenes como tu.
+                  <br/><br/> <a class="waves-effect waves-light btn-large primary-color block animated bouncein delay-4" href="registro.html">Registrate</a>
+                  <br/> <a class="waves-effect waves-light btn-large primary-color block animated bouncein delay-6" href="ingreso.html">Ingresa</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination white-bullet"></div>
+          <!-- End of Slider -->
+        </div>
       </div>
       <!-- End of Main Contents -->
-      
-      <!-- Footer -->
-            <footer class="page-footer primary-color">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="center-align">
-                                <a target="_blank" href="https://www.facebook.com/xualiapp"> <i class="ion-social-facebook m-10 white-text"></i> </a>
-                                <a target="_blank" href="https://twitter.com/xualiapp"> <i class="ion-social-twitter m-10 white-text"></i> </a>
-                                <a target="_blank" href="https://www.instagram.com/xualiapp/"> <i class="ion-social-instagram m-10 white-text"></i> </a>
-                                <a target="_blank" href="https://www.youtube.com/channel/UCUrCy4d8A4rFTjxhx7dfs3g"> <i class="ion-social-youtube m-10 white-text"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright blue darken-1" style="height: 7px;"></div>
-            </footer>
 
     </div>
     <!-- End of Page Content -->

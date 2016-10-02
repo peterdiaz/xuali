@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     $.ajax({
         method: "POST",
-        url: "http://127.0.0.1:8085/api/usuario/login",
+        url: "https://xualiapi.herokuapp.com/api/usuario/login",
         data: {
           email: registro.email,
           password: registro.password

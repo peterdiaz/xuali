@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     $.ajax({
         method: "POST",
-        url: "http://127.0.0.1:8085/api/usuario/registro",
+        url: "https://xualiapi.herokuapp.com/api/usuario/registro",
         data: {
           nombre: registro.nombre,
           tipoDocumento: registro.tipoDocumento,

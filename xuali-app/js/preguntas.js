@@ -38,7 +38,7 @@ preguntas = function () {
   app.init = function () {
     $.ajax({
         method: "GET",
-        url: "http://127.0.0.1:8085/api/preguntas",
+        url: "https://xualiapi.herokuapp.com/api/preguntas",
         data: {},
         beforeSend: function (xhr) {
           xhr.setRequestHeader("Authorization", "Basic " + localStorage.basicAuth);

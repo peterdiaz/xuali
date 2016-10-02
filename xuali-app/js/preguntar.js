@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     $.ajax({
         method: "POST",
-        url: "http://127.0.0.1:8085/api/pregunta",
+        url: "https://xualiapi.herokuapp.com/api/preguntas",
         data: {
           titulo: pregunta.titulo,
           descripcion: pregunta.descripcion
