@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Historias</title>
+    <title>Xuali - Registro</title>
     <meta content="IE=edge" http-equiv="x-ua-compatible">
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
-
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <!-- Icons -->
@@ -43,7 +40,7 @@
                     </div>
                 </div>
             </li>
-            <li><span class="no-child"><i class="ion-ios-videocam"></i> Historias</span></li>
+            <li><a href="historias.html" class="no-child"><i class="ion-ios-videocam"></i> Historias</a></li>
             <li><a href="preguntas.html" class="no-child"><i class="ion-android-chat"></i> Preguntas</a></li>
             <li><a href="calendario.html" class="no-child"><i class="ion-android-calendar"></i> Eventos</a></li>
             
@@ -51,57 +48,50 @@
         <!-- End of Sidebars -->
 
         <!-- Page Content -->
-        <div id="content" class="grey-blue page">
+        <div id="content" class="grey-blue signup">
 
             <!-- Toolbar -->
-            <div id="toolbar" class="primary-color">
+            <div id="toolbar" class="tool-signup primary-color animated fadeindown">
                 <div class="open-left" id="open-left" data-activates="slide-out-left">
                     <i class="ion-android-menu"></i>
                 </div>
-                <span class="title">Historias</span>
+                <a href="javascript:history.back()" class="open-left">
+                    <i class="ion-android-arrow-back"></i>
+                </a>
+                <span class="title">Preguntale a Xuali</span>
             </div>
 
             <!-- Main Content -->
-            <div class="animated cardContainer">
+            <div class="signup-form animated fadeinup delay-2 z-depth-1">
 
-
-
-                <div class="blog-card animated delay-1 row cardTemplate" hidden>
-                    <div class="blog-image col s12 m7">
-                        <img id="img" src="img/10.jpg" alt="" class="animated delay-3">
-                    </div>
-                    <div class="col s12 m5">
-                        <div class="blog-title col s12">
-                            <h4 id="title" class="uppercase"></h4>
-                        </div>
-
-                        <div class="blog-preview p-20  col s12">
-                            <p id="description"></p>
-                            <a id="link" href="" class="waves-effect waves-light btn primary-color">Ver Historia</a>
-                        </div>
+                <h1>Pregunta</h1>
+                <div class="row">
+                    <div class="input-field col s12" style="margin-bottom:20px;">
+                        <i class="ion-android-contact prefix"></i>
+                        <input class="validate" id="titulo" type="text">
+                        <label for="titulo">Coloca un titulo a tu pregunta</label>
                     </div>
                 </div>
 
+
+                <div class="row">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="pregunta" class="materialize-textarea"></textarea>
+                                    <label for="pregunta">Escribe tu pregunta</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="preguntar" class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4">Enviar</div>
             </div>
             <!-- End of Main Contents -->
-           
-           <!-- Footer -->
-            <footer class="page-footer primary-color">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="center-align">
-                                <a target="_blank" href="https://www.facebook.com/xualiapp"> <i class="ion-social-facebook m-10 white-text"></i> </a>
-                                <a target="_blank" href="https://twitter.com/xualiapp"> <i class="ion-social-twitter m-10 white-text"></i> </a>
-                                <a target="_blank" href="https://www.instagram.com/xualiapp/"> <i class="ion-social-instagram m-10 white-text"></i> </a>
-                                <a target="_blank" href="https://www.youtube.com/channel/UCUrCy4d8A4rFTjxhx7dfs3g"> <i class="ion-social-youtube m-10 white-text"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright blue darken-1" style="height: 7px;"></div>
-            </footer>
-            
+
+        </div>
         <!-- End of Page Content -->
 
     </div>
@@ -116,11 +106,8 @@
     <script src="js/masonry.min.js"></script>
     <script src="js/chart.min.js"></script>
     <script src="js/functions.js"></script>
-
-    <script src="js/historias.js"></script>
-
-    <script>
-    </script>
+    
+    <script src="js/preguntar.js"></script>
 
 </body>
 

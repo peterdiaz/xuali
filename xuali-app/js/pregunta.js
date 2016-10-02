@@ -3,6 +3,8 @@ pregunta = function () {
 
     if (!localStorage.basicAuth) {
         location.href = 'ingreso.html';
+    } else {
+        document.getElementById("userName").textContent = localStorage.userName;
     }
 
     var app = {
@@ -61,5 +63,13 @@ pregunta = function () {
     app.init();
 
 };
+
+$("#logoutButton").click(function (event) {
+    event.preventDefault();
+    localStorage.removeItem('userName');
+    localStorage.removeItem('basicAuth');
+
+    location.href = 'welcome.html';
+});
 
 pregunta();  

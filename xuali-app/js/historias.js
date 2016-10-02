@@ -3,7 +3,9 @@ historias = function () {
 
   if (!localStorage.basicAuth) {
     location.href = 'ingreso.html';
-  }
+  } else {
+        document.getElementById("userName").textContent = localStorage.userName;
+    }
 
   var app = {
     isLoading: true,
@@ -18,7 +20,7 @@ historias = function () {
     if (!card) {
       card = app.cardTemplate.cloneNode(true);
       card.classList.remove('cardTemplate');
-      card.querySelector('#img').src = data.URL_PORTADA;
+      card.querySelector('#img').src = 'img/' + data.URL_PORTADA;
       card.querySelector('#link').href = 'historia.html?id=' + data.ID_HISTORIA +  '&url=' + data.URL_HISTORIA +  '&title=' + data.TITLE_HISTORIA; 
       app.container.appendChild(card);
       app.visibleCards[data.id] = card;
@@ -53,5 +55,13 @@ historias = function () {
   app.init();
 
 };
+
+$("#logoutButton").click(function (event) {
+    event.preventDefault();
+    localStorage.removeItem('userName');
+    localStorage.removeItem('basicAuth');
+
+    location.href = 'welcome.html';
+});
 
 historias();  

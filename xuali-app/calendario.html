@@ -2,130 +2,142 @@
 <html lang="en-US">
 
 <head>
-  <title>Xuali - Eventos</title>
-  <meta content="IE=edge" http-equiv="x-ua-compatible">
-  <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
-  <meta content="yes" name="apple-mobile-web-app-capable">
-  <meta content="yes" name="apple-touch-fullscreen">
+    <title>Xuali - Eventos</title>
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
 
-  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-  <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <!-- Icons -->
-  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
-  <!-- Styles -->
-  <link href="css/keyframes.css" rel="stylesheet" type="text/css">
-  <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
-  <link href="css/swiper.css" rel="stylesheet" type="text/css">
-  <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Icons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div class="m-scene" id="main">
-    <!-- Main Container -->
+    <div class="m-scene" id="main">
+        <!-- Main Container -->
 
-    <!-- Sidebars -->
-    <!-- Left Sidebar -->
-    <ul id="slide-out-left" class="side-nav collapsible">
-      <li>
-        <div class="sidenav-header primary-color">
-          <div class="nav-social">
-          </div>
-          <div class="nav-avatar">
+        <!-- Sidebars -->
+        <!-- Left Sidebar -->
+        <ul id="slide-out-left" class="side-nav collapsible">
+            <li>
+                <div class="sidenav-header primary-color">
+                    <div class="nav-social">
+                    </div>
+                    <div class="nav-avatar">
 
-            <img class="circle avatar" src="img/user.jpg" alt="">
-            <a href="profile.html">
-              <div class="avatar-body">
-                <h3>Nombre Usuario</h3>
-              </div>
-            </a>
-          </div>
+                        <img class="circle avatar" src="img/user.jpg" alt="">
+
+                        <div class="avatar-body">
+                            <h3 id="userName">Nombre Usuario</h3>
+                        </div>
+                        <span id="logoutButton"> <i class="ion-android-exit m-r-5"> </i> </span>
+                    </div>
+                </div>
+            </li>
+            <li><a href="historias.html" class="no-child"><i class="ion-ios-videocam"></i> Historias</a></li>
+            <li><a href="preguntas.html" class="no-child"><i class="ion-android-chat"></i> Preguntas</a></li>
+            <li><a href="calendario.html" class="no-child"><i class="ion-android-calendar"></i> Eventos</a></li>
+
+        </ul>
+        <!-- End of Sidebars -->
+
+        <!-- Page Content -->
+        <div id="content" class="page">
+
+            <!-- Toolbar -->
+            <div id="toolbar" class="primary-color no-shadow">
+                <div class="open-left" id="open-left" data-activates="slide-out-left">
+                    <i class="ion-android-menu"></i>
+                </div>
+                <span class="title">Eventos</span>
+            </div>
+
+            <!-- Main Content -->
+            <div class="animated fadein">
+                <!-- Daily Activity-->
+                <div class="activities">
+                    <div class="activity animated fadeinright delay-1">
+                        <p>Tomemonos un tinto distinto</p>
+                        <p class="text-small">Fundacion Juventud en Extasis</p>
+                        <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class=""> Sept 29, 8am - 9am | Cartagena, Casa de la Cultura</span></span>
+                        <span class="activity-type"><i class="ion-coffee"></i></span>
+                    </div>
+
+                    <!-- Activity -->
+                    <div class="activity animated fadeinright delay-2">
+                        <p>Taller "Mi proyecto de Vida"</p>
+                        <p class="text-small">Coosalud</p>
+                        <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">Oct 5, 2pm - 4pm | Cartagena, Barrio Bosque Salon Comunal Parque el Bosque</span></span>
+                        <span class="activity-type"><i class="ion-android-create"></i></span>
+                    </div>
+
+                    <!-- Activity -->
+                    <div class="activity animated fadeinright delay-3">
+                        <p>Asesorias Personalizadas</p>
+                        <p class="text-small">Programa SER-Joven</p>
+                        <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">Oct 15, 8am - 2pm | Cartagena, Barrio Zaragocilla, Sede Principal</span></span>
+                        <span class="activity-type"><img class="circle" src="img/user.jpg" alt=""></span>
+                    </div>
+
+                    <!-- Activity -->
+                    <div class="activity animated fadeinright delay-4">
+                        <p>Jornada recreativa</p>
+                        <p class="text-small">Instituto de Recreacion y Deportes</p>
+                        <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">Oct 17, 9am - 11pm | Cartagena, Centro Historico, Parque de la Marina</span></span>
+                        <span class="activity-type"><i class="ion-xbox"></i></span>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- End of Main Contents -->
+
+            <!-- Footer -->
+            <footer class="page-footer primary-color">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="center-align">
+                                <a target="_blank" href="https://www.facebook.com/xualiapp"> <i class="ion-social-facebook m-10 white-text"></i> </a>
+                                <a target="_blank" href="https://twitter.com/xualiapp"> <i class="ion-social-twitter m-10 white-text"></i> </a>
+                                <a target="_blank" href="https://www.instagram.com/xualiapp/"> <i class="ion-social-instagram m-10 white-text"></i> </a>
+                                <a target="_blank" href="https://www.youtube.com/channel/UCUrCy4d8A4rFTjxhx7dfs3g"> <i class="ion-social-youtube m-10 white-text"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright blue darken-1" style="height: 7px;"></div>
+            </footer>
+
+
         </div>
-      </li>
-      <li><a href="historias.html" class="no-child"><i class="ion-ios-videocam"></i> Historias</a></li>
-      <li><a href="preguntas.html" class="no-child"><i class="ion-android-chat"></i> Preguntas</a></li>
-      <li><a href="calendario.html" class="no-child"><i class="ion-android-calendar"></i> Eventos</a></li>
-      <li><a href="profile.html" class="no-child"><i class="ion-android-person"></i> Mi perfil</a></li>
-    </ul>
-    <!-- End of Sidebars -->
-
-    <!-- Page Content -->
-    <div id="content" class="page">
-
-      <!-- Toolbar -->
-      <div id="toolbar" class="primary-color no-shadow">
-        <div class="open-left" id="open-left" data-activates="slide-out-left">
-          <i class="ion-android-menu"></i>
-        </div>
-        <span class="title">Eventos</span>
-      </div>
-
-      <!-- Main Content -->
-      <div class="animated fadein">
-        <!-- Daily Activity-->
-        <div class="activities">
-          <div class="activity animated fadeinright delay-1">
-            <p>Breakfast with Lee</p>
-            <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">7 - 9am | Just a coffee</span></span>
-            <span class="activity-type"><i class="ion-coffee"></i></span>
-          </div>
-
-          <!-- Activity -->
-          <div class="activity animated fadeinright delay-2">
-            <p>Work Meeting</p>
-            <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">10 - 11am | Web App</span></span>
-            <span class="activity-type"><i class="ion-android-create"></i></span>
-          </div>
-
-          <!-- Activity -->
-          <div class="activity animated fadeinright delay-3">
-            <p>Lunch with Tim</p>
-            <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">1 - 2pm | Restaurant</span></span>
-            <span class="activity-type"><img class="circle" src="img/user.jpg" alt=""></span>
-          </div>
-
-          <!-- Activity -->
-          <div class="activity animated fadeinright delay-4">
-            <p>Buy Ticket to Tokyo</p>
-            <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">7pm | At Home</span></span>
-            <span class="activity-type"><i class="ion-android-plane"></i></span>
-          </div>
-
-          <!-- Activity -->
-          <div class="activity animated fadeinright delay-5">
-            <p>Mike's Party</p>
-            <span class="activity-time text-small text-light"><i class="ion-ios-clock-outline m-r-5"></i> <span class="">22pm | Mike's House</span></span>
-            <span class="activity-type">
-                <img class="circle" src="img/user2.jpg" alt="">
-              </span>
-            <span class="activity-type second-type">
-                <img class="circle" src="img/user3.jpg" alt="">
-              </span>
-          </div>
-        </div>
-
-      </div>
-      <!-- End of Main Contents -->
-
+        <!-- End of Page Content -->
 
     </div>
-    <!-- End of Page Content -->
+    <!-- End of Page Container -->
 
-  </div>
-  <!-- End of Page Container -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script src="js/jquery.smoothState.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/functions.js"></script>
 
-
-  <script src="js/jquery-2.1.0.min.js"></script>
-  <script src="js/jquery.swipebox.min.js"></script>
-  <script src="js/jquery.smoothState.min.js"></script>
-  <script src="js/materialize.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/jquery.mixitup.min.js"></script>
-  <script src="js/masonry.min.js"></script>
-  <script src="js/chart.min.js"></script>
-  <script src="js/functions.js"></script>
+    <script src="js/calendario.js"></script>
 </body>
 
 </html>

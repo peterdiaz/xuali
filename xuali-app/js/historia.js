@@ -3,6 +3,8 @@ historia = function () {
 
     if (!localStorage.basicAuth) {
         location.href = 'ingreso.html';
+    } else {
+        document.getElementById("userName").textContent = localStorage.userName;
     }
 
     var app = {
@@ -17,6 +19,8 @@ historia = function () {
         var video = document.getElementById("videoSource");
         console.log(data);
         video.src = 'video/' + data.url;
+        sources = video.querySelectorAll('source');
+        video.load();
     }
 
     app.getQueryVariable =  function (variable) {
@@ -39,5 +43,13 @@ historia = function () {
     app.init();
 
 };
+
+$("#logoutButton").click(function (event) {
+    event.preventDefault();
+    localStorage.removeItem('userName');
+    localStorage.removeItem('basicAuth');
+
+    location.href = 'welcome.html';
+});
 
 historia();  

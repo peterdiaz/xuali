@@ -3,7 +3,9 @@ preguntas = function () {
 
   if (!localStorage.basicAuth) {
     location.href = 'ingreso.html';
-  }
+  } else {
+        document.getElementById("userName").textContent = localStorage.userName;
+    }
 
   var app = {
     isLoading: true,
@@ -23,7 +25,8 @@ preguntas = function () {
       title.href = 'pregunta.html?id=' + data.ID_PREGUNTA;
 
       card.querySelector('.title').textContent = data.DS_TITULO;
-      card.querySelector('.fecha').textContent = data.DT_PREGUNTA; 
+      var options = {year: 'numeric', month: 'long', day: 'numeric' };
+      card.querySelector('.fecha').textContent = new Date(data.DT_PREGUNTA).toLocaleDateString('es-CO', options); 
       app.container.appendChild(card);
       app.visibleCards[data.id] = card;
     }
@@ -57,5 +60,13 @@ preguntas = function () {
   app.init();
 
 };
+
+$("#logoutButton").click(function (event) {
+    event.preventDefault();
+    localStorage.removeItem('userName');
+    localStorage.removeItem('basicAuth');
+
+    location.href = 'welcome.html';
+});
 
 preguntas();  
