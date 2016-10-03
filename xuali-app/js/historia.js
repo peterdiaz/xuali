@@ -18,9 +18,9 @@ historia = function () {
         var card = app.cardTemplate;
         var video = document.getElementById("videoSource");
         console.log(data);
-        video.src = 'video/' + data.url;
-        sources = video.querySelectorAll('source');
-        video.load();
+        //video.src = 'video/' + data.url;
+        //sources = video.querySelectorAll('source');
+        //video.load();
     }
 
     app.getQueryVariable =  function (variable) {

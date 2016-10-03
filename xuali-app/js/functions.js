@@ -24,7 +24,7 @@ $(function () {
                 $('#bottom-sheet').closeModal();
                 $container.addClass('is-exiting');
                 smoothState.restartCSSAnimations();
-                setTimeout(function () { }, duration_CONSTANT * 2);
+                setTimeout(function () {}, duration_CONSTANT * 2);
             }
         },
         onReady: {
@@ -36,7 +36,7 @@ $(function () {
         },
         onAfter: function ($container, $newContent) {
             setTimeout(function () {
-                ResizeHandler = ResizeHandler || function () { };
+                ResizeHandler = ResizeHandler || function () {};
                 ResizeHandler();
             }, 500)
             initiate_plugins(); // All onAfter calls goes inside this function
@@ -74,7 +74,7 @@ function initiate_plugins() {
         edge: 'left', // Choose the horizontal origin
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     });
-  
+
     // Swipebox
     $('.swipebox').swipebox();
 
@@ -82,7 +82,7 @@ function initiate_plugins() {
     $('.grid').masonry({
         itemSelector: '.grid-item'
     });
-  
+
     // Scrolling Floating Action Button
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
@@ -92,7 +92,7 @@ function initiate_plugins() {
             $(".floating-button").removeClass("scrolled-down");
         }
     });
-  
+
     // Row Height for Drawer
     var grandparent_height = $('#grandparent').height();
     $('.child').height(grandparent_height * 0.25);
@@ -128,7 +128,7 @@ function initiate_plugins() {
         autoplay: 5000,
         direction: 'vertical'
     });
-  
+
     // MixItUP
     $(function () {
         var layout = 'grid', // Store the current layout as a variable
@@ -137,7 +137,7 @@ function initiate_plugins() {
         // Instantiate MixItUp with some custom options:
         try {
             $container.mixItUp('destroy');
-        } catch (x) { }
+        } catch (x) {}
         $container.mixItUp({
             animation: {
                 animateChangeLayout: true, // Animate the positions of targets as the layout changes
@@ -167,7 +167,7 @@ function initiate_plugins() {
             }
         });
     });
-  
+
     // Material Layout
     $('.parallax').parallax();
     $(function () {
@@ -209,22 +209,22 @@ function initiate_plugins() {
             });
         });
     });
-  
+
     // Chart
     // Charts
     // LINE GRAPH
     var lineChartData = {
-        labels: ["1", "2", "3", "4", "5", "6", "7"],
-        datasets: [{
-            label: "My First dataset",
-            fillColor: "rgba(100, 181, 246, 0.5)",
-            strokeColor: "#90caf9",
-            pointColor: "transparent",
-            pointStrokeColor: "rgba(41, 128, 185, 0)",
-            pointHighlightFill: "rgba(41, 128, 185, 0.9)",
-            pointHighlightStroke: "rgba(41, 128, 185, 0)",
-            data: [100, 70, 20, 155, 50, 70, 50]
-        }, {
+            labels: ["1", "2", "3", "4", "5", "6", "7"],
+            datasets: [{
+                label: "My First dataset",
+                fillColor: "rgba(100, 181, 246, 0.5)",
+                strokeColor: "#90caf9",
+                pointColor: "transparent",
+                pointStrokeColor: "rgba(41, 128, 185, 0)",
+                pointHighlightFill: "rgba(41, 128, 185, 0.9)",
+                pointHighlightStroke: "rgba(41, 128, 185, 0)",
+                data: [100, 70, 20, 155, 50, 70, 50]
+            }, {
                 label: "My Second dataset",
                 fillColor: "rgba(155, 89, 182, 0.5)",
                 strokeColor: "rgba(155, 89, 182, 0.6)",
@@ -234,24 +234,24 @@ function initiate_plugins() {
                 pointHighlightStroke: "rgba(231, 76, 60, 0)",
                 data: [28, 54, 40, 19, 37, 20, 90]
             }]
-    }
-    // PIE CHART
+        }
+        // PIE CHART
     var pieData = [{
         value: 33,
         color: "#BBDEFB",
         highlight: "#29b6f6",
         label: "New"
     }, {
-            value: 66,
-            color: "#ffcc80",
-            highlight: "#ffa726",
-            label: "Completed"
-        }, {
-            value: 66,
-            color: "#e1bee7",
-            highlight: "#ba68c8",
-            label: "Cancelled"
-        }];
+        value: 66,
+        color: "#ffcc80",
+        highlight: "#ffa726",
+        label: "Completed"
+    }, {
+        value: 66,
+        color: "#e1bee7",
+        highlight: "#ba68c8",
+        label: "Cancelled"
+    }];
     // Doughnut Chart
     var doughnutData = [{
         value: 250,
@@ -259,16 +259,16 @@ function initiate_plugins() {
         highlight: "#42a5f5",
         label: "Search"
     }, {
-            value: 70,
-            color: "#EF9A9A",
-            highlight: "#ef5350",
-            label: "Bounce"
-        }, {
-            value: 100,
-            color: "#fff9c4",
-            highlight: "#fff176",
-            label: "New"
-        }];
+        value: 70,
+        color: "#EF9A9A",
+        highlight: "#ef5350",
+        label: "Bounce"
+    }, {
+        value: 100,
+        color: "#fff9c4",
+        highlight: "#fff176",
+        label: "New"
+    }];
 
 }
 ////--> End of Call all function for Ajax, now from there recall all the functions <--////
@@ -429,13 +429,21 @@ $(function () {
             });
         }
     });
-  
+
     // init swiper layout
     window.onload = function () {
         setTimeout(function () {
-            ResizeHandler = ResizeHandler || function () { };
+            ResizeHandler = ResizeHandler || function () {};
             ResizeHandler();
         }, 500)
     };
 
 });
+
+function gotoRegistro() {
+    location.href = 'registro.html';
+}
+
+function gotoIngreso() {
+    location.href = 'ingreso.html';
+}
