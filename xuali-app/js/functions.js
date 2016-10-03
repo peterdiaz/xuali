@@ -447,3 +447,10 @@ function gotoRegistro() {
 function gotoIngreso() {
     location.href = 'ingreso.html';
 }
+
+function isUserLogged(){
+    console.log('isUserLogged!');
+    if(localStorage.basicAuth){
+        location.href = 'historias.html';
+    }
+}

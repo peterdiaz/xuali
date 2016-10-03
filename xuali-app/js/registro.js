@@ -27,7 +27,7 @@ $(document).ready(function () {
         localStorage.basicAuth = data.basicAuth;
         localStorage.userName = data.nombre;
 
-        Materialize.toast( localStorage.userName + ' bienvenido a xuali!', 1000, 'rounded', function () {
+        Materialize.toast( data.nombre + ' bienvenido a xuali!', 1000, 'rounded', function () {
           location.href = 'historias.html';
         });
       })
