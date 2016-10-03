@@ -61,7 +61,7 @@ $("#logoutButton").click(function (event) {
     localStorage.removeItem('userName');
     localStorage.removeItem('basicAuth');
 
-    location.href = 'welcome.html';
+    location.href = 'index.html';
 });
 
 historias();  
