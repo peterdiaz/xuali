@@ -43,7 +43,7 @@ historias = function () {
       })
       .done(function (data) {
         data.forEach(function (historia) {
-          app.updateHistoryCard(historia)
+          app.updateHistoryCard(historia);
         });
       })
       .fail(function (err) {
@@ -56,6 +56,8 @@ historias = function () {
 
 };
 
+historias();  
+
 $("#logoutButton").click(function (event) {
     event.preventDefault();
     localStorage.removeItem('userName');
@@ -63,5 +65,3 @@ $("#logoutButton").click(function (event) {
 
     location.href = 'index.html';
 });
-
-historias();  

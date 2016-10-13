@@ -4,8 +4,8 @@ preguntas = function () {
   if (!localStorage.basicAuth) {
     location.href = 'ingreso.html';
   } else {
-        document.getElementById("userName").textContent = localStorage.userName;
-    }
+    document.getElementById("userName").textContent = localStorage.userName;
+  }
 
   var app = {
     isLoading: true,
@@ -20,17 +20,21 @@ preguntas = function () {
     if (!card) {
       card = app.cardTemplate.cloneNode(true);
       card.classList.remove('.cardTemplate');
-      var title = card.querySelector('.title'); 
+      var title = card.querySelector('.title');
       title.textContent = data.DS_TITULO;
       title.href = 'pregunta.html?id=' + data.ID_PREGUNTA;
-
       card.querySelector('.title').textContent = data.DS_TITULO;
-      var options = {year: 'numeric', month: 'long', day: 'numeric' };
-      card.querySelector('.fecha').textContent = new Date(data.DT_PREGUNTA).toLocaleDateString('es-CO', options); 
       app.container.appendChild(card);
       app.visibleCards[data.id] = card;
     }
-    card.querySelector('.resumen').textContent = data.DS_PREGUNTA;    
+    var options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+    card.querySelector('.fecha').textContent = new Date(data.DT_PREGUNTA).toLocaleDateString('es-CO', options);
+
+    card.querySelector('.resumen').textContent = data.DS_PREGUNTA;
     card.removeAttribute('hidden');
     card.classList.add('fadein');
   };
@@ -48,7 +52,7 @@ preguntas = function () {
         console.log('data..');
         console.log(data);
         data.forEach(function (question) {
-          app.updateQuestionCard(question)
+          app.updateQuestionCard(question);
         });
       })
       .fail(function (err) {
@@ -61,12 +65,12 @@ preguntas = function () {
 
 };
 
+preguntas();
+
 $("#logoutButton").click(function (event) {
-    event.preventDefault();
-    localStorage.removeItem('userName');
-    localStorage.removeItem('basicAuth');
+  event.preventDefault();
+  localStorage.removeItem('userName');
+  localStorage.removeItem('basicAuth');
 
-    location.href = 'index.html';
+  location.href = 'index.html';
 });
-
-preguntas();  

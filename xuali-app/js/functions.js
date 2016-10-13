@@ -13,10 +13,10 @@ $(function () {
             }, !1)
         }
     })(document, window.navigator, "standalone");
-    var duration_CONSTANT = 250;
+    var duration_CONSTANT = 200;
     var options = {
-        prefetch: true,
-        cacheLength: 20,
+        prefetch: false,
+        cacheLength: 0,
         blacklist: '.no-smoothState',
         onStart: {
             duration: duration_CONSTANT,
@@ -42,7 +42,7 @@ $(function () {
             initiate_plugins(); // All onAfter calls goes inside this function
         }
     };
-    var smoothState = $('#main').smoothState(options).data('smoothState');
+    //var smoothState = $('#main').smoothState(options).data('smoothState');
 });
 ////--> Call all function for Ajax <--////
 function initiate_plugins() {

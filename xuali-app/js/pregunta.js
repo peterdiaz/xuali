@@ -16,14 +16,22 @@ pregunta = function () {
 
     app.updateChatCard = function (data) {
         var card = app.cardTemplate;
-        var pregunta =  card.querySelector('.pregunta');
-        var respuesta =  card.querySelector('.respuesta');
+        var pregunta = card.querySelector('.pregunta');
+        var respuesta = card.querySelector('.respuesta');
         pregunta.textContent = data.DS_PREGUNTA;
         respuesta.textContent = data.DS_RESPUESTA;
-        card.querySelector('.chatTitulo').textContent = data.DS_TITULO; 
+        card.querySelector('.chatTitulo').textContent = data.DS_TITULO;
+
+        var options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        card.querySelector('.fecha').textContent = new Date(data.DT_PREGUNTA).toLocaleDateString('es-CO', options);
+        card.querySelector('.fechaRespuesta').textContent = new Date(data.DT_RESPUESTA).toLocaleDateString('es-CO', options);
     }
 
-    app.getQueryVariable =  function (variable) {
+    app.getQueryVariable = function (variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
         for (var i = 0; i < vars.length; i++) {
@@ -38,26 +46,26 @@ pregunta = function () {
     app.init = function () {
         var urlChatId = app.getQueryVariable('id');
         console.log('urlChatId: ' + urlChatId);
-         $.ajax({
-        method: "GET",
-        url: "https://xualiapi.herokuapp.com/api/preguntas/" + urlChatId,
-        data: {},
-        beforeSend: function (xhr) {
-          xhr.setRequestHeader("Authorization", "Basic " + localStorage.basicAuth);
-        },
-      })
-      .done(function (data) {
-        console.log('data..');
-        console.log(data);
-        data.forEach(function (chat) {
-          app.updateChatCard(chat);
-        });
-      })
-      .fail(function (err) {
-        console.log(JSON.stringify(err));
-        Materialize.toast('Ouch!... Disculpa hubo un problema buscando la pregunta.', 4000, 'rounded');
-      });
-        
+        $.ajax({
+                method: "GET",
+                url: "https://xualiapi.herokuapp.com/api/preguntas/" + urlChatId,
+                data: {},
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + localStorage.basicAuth);
+                },
+            })
+            .done(function (data) {
+                console.log('data..');
+                console.log(data);
+                data.forEach(function (chat) {
+                    app.updateChatCard(chat);
+                });
+            })
+            .fail(function (err) {
+                console.log(JSON.stringify(err));
+                Materialize.toast('Ouch!... Disculpa hubo un problema buscando la pregunta.', 4000, 'rounded');
+            });
+
     }
 
     app.init();
@@ -72,4 +80,4 @@ $("#logoutButton").click(function (event) {
     location.href = 'index.html';
 });
 
-pregunta();  
+pregunta();
