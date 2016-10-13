@@ -33,6 +33,7 @@ historias = function () {
   };
 
   app.init = function () {
+    document.getElementById("userName").textContent = localStorage.userName;
     $.ajax({
         method: "GET",
         url: "https://xualiapi.herokuapp.com/api/historias",
