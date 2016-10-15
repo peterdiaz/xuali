@@ -19,6 +19,7 @@ $(document).ready(function () {
         console.log(data);
         localStorage.basicAuth = data.basicAuth; 
         localStorage.userName = data.nombre; 
+        localStorage.userId = data.id;
 
         Materialize.toast( localStorage.userName + ' bienvenido a xuali!', 1000, 'rounded', function () {
           location.href = 'historias.html';

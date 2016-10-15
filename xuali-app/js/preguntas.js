@@ -68,9 +68,10 @@ preguntas = function () {
 preguntas();
 
 $("#logoutButton").click(function (event) {
-  event.preventDefault();
-  localStorage.removeItem('userName');
-  localStorage.removeItem('basicAuth');
+    event.preventDefault();
+    localStorage.removeItem('userName');
+    localStorage.removeItem('basicAuth');
+    localStorage.removeItem('userId');
 
-  location.href = 'index.html';
+    location.href = 'index.html';
 });
