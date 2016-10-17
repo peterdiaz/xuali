@@ -1,114 +1,124 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Xuali - Registro</title>
-  <meta content="IE=edge" http-equiv="x-ua-compatible">
-  <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
-  <meta content="yes" name="apple-mobile-web-app-capable">
-  <meta content="yes" name="apple-touch-fullscreen">
+	<title>Xuali - Registro</title>
+	<meta content="IE=edge" http-equiv="x-ua-compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
 
-  <!-- Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-  <!-- Icons -->
-  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
-  <!-- Styles -->
-  <link href="css/keyframes.css" rel="stylesheet" type="text/css">
-  <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
-  <link href="css/swiper.css" rel="stylesheet" type="text/css">
-  <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<!-- Icons -->
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+	<!-- Styles -->
+	<link href="css/keyframes.css" rel="stylesheet" type="text/css">
+	<link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+	<link href="css/swiper.css" rel="stylesheet" type="text/css">
+	<link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 
-  <link rel="icon" type="image/png" href="img/favicon.ico" />
+	<link rel="icon" type="image/png" href="img/favicon.ico" />
 </head>
 
 <body>
-  <div class="m-scene" id="main">
-    <!-- Main Container -->
+	<div class="m-scene" id="main">
+		<!-- Main Container -->
 
-    <!-- Page Content -->
-    <div id="content" class="grey-blue signup">
+		<!-- Page Content -->
+		<div id="content" class="grey-blue signup">
 
-      <!-- Toolbar -->
-      <div id="toolbar" class="tool-signup primary-color animated fadeindown">
-        <a href="javascript:history.back()" class="open-left">
-          <i class="ion-android-arrow-back"></i>
-        </a>
-        <span class="title">Xuali</span>
-      </div>
+			<!-- Toolbar -->
+			<div id="toolbar" class="tool-signup primary-color animated fadeindown">
+				<a href="javascript:history.back()" class="open-left">
+					<i class="ion-android-arrow-back"></i>
+				</a>
+				<span class="title">Xuali</span>
+			</div>
 
-      <!-- Main Content -->
-      <div class="signup-form animated fadeinup delay-2 z-depth-1">
+			<!-- Main Content -->
+			<div class="signup-form animated fadeinup delay-2 z-depth-1">
 
-        <h1>Registro</h1>
-        <div class="row">
-          <div class="input-field col s12 m6" style="margin-bottom:20px;">
-            <i class="ion-android-contact prefix"></i>
-            <input class="validate" id="nombre" type="text">
-            <label for="nombre">Nombre Completo</label>
-          </div>
+				<h1>Registro</h1>
+				<form id="register" method="post" action="javascript:void(0)">
 
-          <div class="input-field col s12 m6">
-            <i class="ion-android-mail prefix"></i>
-            <input class="validate" id="email" type="text">
-            <label for="email">Email</label>
-          </div>
-        </div>
-        <div class="row">
-          
-            
-            <div class="input-field col s12 m6">
-              <i class="ion-android-document prefix"></i>
-              <input class="validate" id="tipoDocumento" type="text">
-              <label for="tipoDocumento">Tipo de Identificacion</label>
-            </div>
-            
-          
+					<div class="row">
+						<div class="input-field col s12 m6" style="margin-bottom:20px;">
+							<i class="ion-android-contact prefix"></i>
+							<input class="validate" id="nombre" type="text" minlength="2" required>
+							<label for="nombre" data-error="Ingresa tu nombre y apellido" data-success="" style="width: 100%;">Nombre Completo</label>
+						</div>
 
-          <div class="input-field col s12 m6" style="margin-bottom:20px;">
-            <i class="ion-android-hand prefix"></i>
-            <input class="validate" id="idDocumento" type="text">
-            <label for="idDocumento">Numero de Identificacion</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m6" style="margin-bottom:20px;">
-            <i class="ion-android-lock prefix"></i>
-            <input class="validate" id="password" type="password">
-            <label for="password">Clave</label>
-          </div>
-
-          <div class="input-field col s12 m6" style="margin-bottom:20px;">
-            <i class="ion-android-done prefix"></i>
-            <input class="validate" id="password2" type="password">
-            <label for="password2">Confirma la clave</label>
-          </div>
-        </div>
-
-        <div id="registrar" class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4">Registrar</div>
-        <div class="center-align">
-          <span>Ya tienes una cuenta? <a class="primary-text" href="ingreso.html">Ingresa!</a></span>
-          <div class="center-align">
-          </div>
-        </div>
-        <!-- End of Main Contents -->
+						<div class="input-field col s12 m6">
+							<i class="ion-android-mail prefix"></i>
+							<input class="validate" id="email" type="email" required>
+							<label for="email" data-error="email incorrecto" data-success="email valido" style="width: 100%;">Email</label>
+						</div>
+					</div>
+					<div class="row">
 
 
-      </div>
-      <!-- End of Page Content -->
+						<div class="input-field col s12 m6">
 
-    </div>
-    <!-- End of Page Container -->
+							<select id="tipoDocumento" required>
+                <option value="TI">Tarjeta de Identidad</option>
+                <option value="CC">Cedula de Ciudadania</option>
+                <option value="ID">Carnet o Identificacion</option>
+             </select>
+							<label for="tipoDocumento" style="width: 100%;">Tipo de Identificacion</label>
+						</div>
 
-    <script src="js/jquery-2.1.0.min.js"></script>
-    <script src="js/jquery.swipebox.min.js"></script>
-    <script src="js/jquery.smoothState.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/jquery.mixitup.min.js"></script>
-    <script src="js/masonry.min.js"></script>
-    <script src="js/chart.min.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/registro.js"></script>
+
+
+						<div class="input-field col s12 m6" style="margin-bottom:20px;">
+							<i class="ion-android-hand prefix"></i>
+							<input class="validate" id="idDocumento" type="text" required number>
+							<label for="idDocumento" style="width: 100%;">Numero de Identificacion</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12 m6" style="margin-bottom:20px;">
+							<i class="ion-android-lock prefix"></i>
+							<input class="validate" id="password" type="password" minlength="4" required>
+							<label for="password" style="width: 100%;">Clave</label>
+						</div>
+
+						<div class="input-field col s12 m6" style="margin-bottom:20px;">
+							<i class="ion-android-done prefix"></i>
+							<input class="validate" id="password2" type="password"  minlength="4" required>
+							<label for="password2" style="width: 100%;">Confirma la clave</label>
+						</div>
+					</div>
+
+					<div id="registrar" class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4">Registrar</div>
+
+				</form>
+
+				<div class="center-align">
+					<span>Ya tienes una cuenta? <a class="primary-text" href="ingreso.html">Ingresa!</a></span>
+					<div class="center-align">
+					</div>
+				</div>
+
+				<!-- End of Main Contents -->
+			</div>
+
+			<!-- End of Page Content -->
+		</div>
+
+		<!-- End of Page Container -->
+	</div>
+
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.swipebox.min.js"></script>
+	<script src="js/jquery.smoothState.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/masonry.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/registro.js"></script>
 </body>
 
 </html>
