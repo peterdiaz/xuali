@@ -37,10 +37,10 @@ $(document).ready(function () {
         })
         .fail(function (err) {
           console.log(JSON.stringify(err));
-          Materialize.toast('Ouch!... Disculpa no hemos podido ingresar.', 4000, 'rounded');
+          Materialize.toast(err.responseJSON.message, 4000, 'rounded');
         });
     } else {
-      Materialize.toast('Por fa revisa los datos de registro.', 3000, 'rounded');
+
     }
   });
 
