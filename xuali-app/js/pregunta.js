@@ -19,7 +19,7 @@ pregunta = function () {
         var pregunta = card.querySelector('.pregunta');
         var respuesta = card.querySelector('.respuesta');
         pregunta.textContent = data.DS_PREGUNTA;
-        respuesta.textContent = data.DS_RESPUESTA;
+        respuesta.textContent = data.DS_RESPUESTA || 'Pronto responderemos esta pregunta';
         card.querySelector('.chatTitulo').textContent = data.DS_TITULO;
 
         var options = {
@@ -28,7 +28,10 @@ pregunta = function () {
             day: 'numeric'
         };
         card.querySelector('.fecha').textContent = new Date(data.DT_PREGUNTA).toLocaleDateString('es-CO', options);
-        card.querySelector('.fechaRespuesta').textContent = new Date(data.DT_RESPUESTA).toLocaleDateString('es-CO', options);
+        console.log(data.DT_RESPUESTA);
+        if(data.DT_RESPUESTA){
+            card.querySelector('.fechaRespuesta').textContent = new Date(data.DT_RESPUESTA).toLocaleDateString('es-CO', options);
+        }
     }
 
     app.getQueryVariable = function (variable) {
@@ -48,7 +51,7 @@ pregunta = function () {
         console.log('urlChatId: ' + urlChatId);
         $.ajax({
                 method: "GET",
-                url: "https://xualiapi.herokuapp.com/api/preguntas/" + urlChatId,
+                url: "http://www.xualiapp.com:8085/api/preguntas/" + urlChatId,
                 data: {},
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("Authorization", "Basic " + localStorage.basicAuth);
@@ -76,6 +79,7 @@ $("#logoutButton").click(function (event) {
     event.preventDefault();
     localStorage.removeItem('userName');
     localStorage.removeItem('basicAuth');
+    localStorage.removeItem('userId');
 
     location.href = 'index.html';
 });

@@ -18,9 +18,9 @@ historia = function () {
         var card = app.cardTemplate;
         var video = document.getElementById("videoSource");
         console.log(data);
-        //video.src = 'video/' + data.url;
-        //sources = video.querySelectorAll('source');
-        //video.load();
+        video.src = data.url + '?rel=0&amp;showinfo=0';
+
+        console.log(video.src);
     }
 
     app.getQueryVariable =  function (variable) {
@@ -48,6 +48,7 @@ $("#logoutButton").click(function (event) {
     event.preventDefault();
     localStorage.removeItem('userName');
     localStorage.removeItem('basicAuth');
+    localStorage.removeItem('userId');
 
     location.href = 'index.html';
 });

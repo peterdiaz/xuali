@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     $.ajax({
         method: "POST",
-        url: "https://xualiapi.herokuapp.com/api/usuario/login",
+        url: "http://www.xualiapp.com:8085/api/usuario/login",
         data: {
           email: registro.email,
           password: registro.password
@@ -19,6 +19,7 @@ $(document).ready(function () {
         console.log(data);
         localStorage.basicAuth = data.basicAuth; 
         localStorage.userName = data.nombre; 
+        localStorage.userId = data.id;
 
         Materialize.toast( localStorage.userName + ' bienvenido a xuali!', 1000, 'rounded', function () {
           location.href = 'historias.html';
