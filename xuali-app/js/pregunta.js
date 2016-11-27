@@ -51,7 +51,7 @@ pregunta = function () {
         console.log('urlChatId: ' + urlChatId);
         $.ajax({
                 method: "GET",
-                url: "https://xualiapi.herokuapp.com/api/preguntas/" + urlChatId,
+                url: "http://www.xualiapp.com:8085/api/preguntas/" + urlChatId,
                 data: {},
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("Authorization", "Basic " + localStorage.basicAuth);

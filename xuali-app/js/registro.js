@@ -15,7 +15,7 @@ $(document).ready(function () {
     if (validarFormulario(registro)) {
       $.ajax({
           method: "POST",
-          url: "https://xualiapi.herokuapp.com/api/usuario/registro",
+          url: "http://www.xualiapp.com:8085/api/usuario/registro",
           data: {
             nombre: registro.nombre,
             tipoDocumento: registro.tipoDocumento,

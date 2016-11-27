@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $.ajax({
         method: "POST",
-        url: "https://xualiapi.herokuapp.com/api/preguntas",
+        url: "http://www.xualiapp.com:8085/api/preguntas",
         data: {
           userId: pregunta.userId,
           titulo: pregunta.titulo,
